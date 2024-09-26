@@ -3,18 +3,25 @@
   "version": "0.0.3",
   "description": "API project for freeCodeCamp",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "NODE_OPTIONS=--trace-deprecation node index.js",
+    "dev": "nodemon index.js",
+    "format": "npx prettier --write"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "extract-domain": "^4.1.4",
+    "is-url-http": "^2.3.6",
+    "mongoose": "^5.11.15",
+    "nanoid": "^3.3.6"
   },
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "prettier": "^3.0.3"
   }
 }
